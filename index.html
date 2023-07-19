@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -19,72 +20,18 @@
             text-align: center;
             color: white;
         }
-        
-        .birthday-song {
-            display: none;
-        }
-        /* Gaya untuk modal */
-        
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        
-        .modal-content {
-            background-color: #fefefe;
-            margin: 0px;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 100%;
-            height: 100%;
-        }
-        /* Gaya untuk tombol "Mulai" */
-        
-        .start-btn {
-            background-color: #4CAF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 10px;
-            border-radius: 10px;
-        }
     </style>
 </head>
 
 <body>
-    <iframe class="birthday-song" width="560" height="315" src="https://www.youtube.com/embed/WtLXpfPpb-k?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
     <h1>Selamat Ulang Tahun<br> 🎉 Mba Kazha 🎊</h1>
+    <audio id="birthdayAudio" src="sound.mp3" autoplay loop></audio>
     <script>
-        // Fungsi untuk menampilkan modal
-        function showModal() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "block";
-        }
+        var audio = document.getElementById("birthdayAudio");
 
-        // Fungsi untuk menyembunyikan modal dan memulai audio
-        function startBirthdaySong() {
-            var modal = document.getElementById("myModal");
-            modal.style.display = "none";
-
-            // Memulai audio pada iframe
-            var audio = document.getElementById(".birthday-song");
-            audio.play();
-        }
-
-        // Memulai lagu otomatis setelah 3 detik
         setTimeout(function() {
-            showModal();
-        }, 300);
+            audio.play();
+        }, 1000);
 
         var rnd = Math.random,
             flr = Math.floor;
@@ -269,11 +216,6 @@
         init();
         draw();
     </script>
-</body>
-
-</html>
-
-<head>
 
     <body>
 
@@ -283,8 +225,7 @@
                     <br>
                     <font size="30px">
                         <font color="white"></font>
-                        <marquee scrollamount="10" width="95%" height="60" behavior="scroll">................................. Selamat ulang tahun Mba Kazhaa ✨. Semoga sehat selalu, dimudahkan urusannya, dilancarkan rejekinya, dan selalu dalam lindungan Allah SWT., serta selalu dikelilingi oleh orang - orang baik. Zemangatt
-                            Mbaa Kazhaa 😁😁✌🏼</marquee>
+                        <marquee scrollamount="10" width="95%" height="60" behavior="scroll"> Selamat ulang tahun Mba Kazhaa ✨. Semoga sehat selalu, dimudahkan urusannya, dilancarkan rejekinya, dan selalu dalam lindungan Allah SWT., serta selalu dikelilingi oleh orang - orang baik. Zemangatt Mbaa Kazhaa 😁😁✌🏼</marquee>
                         <font color="white"></font>
                         <br><br>
                         <font size="3px" face="Ubuntu Condensed"></font>
@@ -293,4 +234,5 @@
             </center>
         </body>
     </body>
-</head>
+
+</html>
